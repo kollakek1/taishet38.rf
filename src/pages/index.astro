@@ -1,9 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Clock from '../components/clock';
+import NavBar from '../components/navbar';
+import Settings from '../components/settings';
+
+import { MdEmojiEvents, MdLink, MdHome } from "react-icons/md";
+
+import { FaVk } from "react-icons/fa";
 ---
 
-<Layout title="Добро пожаловать домой">
-	<div class="flex items-center justify-center w-screen h-screen">
-		<h1 class="text-4xl font-bold">Скоро</h1>
+<Layout title="It's Тайшет - Главная страница">
+	<div class="container mx-auto flex items-center justify-between mt-6 max-lg:hidden">
+		<p class="text-7xl font-bold ml-2 ">It's Тайшет</p>
+		<Clock client:only="react"/>
+	</div>
+	<div class="container mx-auto bg-base-200 border-2 border-base-300 shadow-lg lg:rounded-box p-3 lg:mt-4 flex justify-between gap-2">
+		<div class="flex gap-2 max-lg:hidden">
+			<button class="btn btn-ghost">
+				Главное <MdHome className="w-6 h-6"/>
+			</button>
+			<button class="btn btn-ghost">
+				События <MdEmojiEvents className="w-6 h-6"/>
+			</button>
+			<button class="btn btn-ghost">
+				Оффициальные ссылки <MdLink className="w-6 h-6"/>
+			</button>
+			<Settings client:only="react"/>
+		</div>
+		<div class="lg:hidden">
+			<NavBar client:only="react"/>
+		</div>
+		<button class="btn bg-[#4680C2] text-white hover:bg-[#3a6aa1]">
+			Войти через
+			<FaVk className='w-5 h-5'/>
+		</button>
 	</div>
 </Layout>

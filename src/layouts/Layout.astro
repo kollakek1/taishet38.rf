@@ -7,12 +7,29 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		  <!-- Open Graph базовые мета-теги -->
+		  <meta property="og:title" content="Тайшет - Неофициальный сайт города" />
+		  <meta property="og:description" content="Неофициальный сайт города Тайшет. Новости, события, и информация о жизни города." />
+		  <meta property="og:url" content="https://тайшет38.рф" />
+		  <meta property="og:type" content="website" />
+		
+		  <!-- Изображение для превью -->
+		  <meta property="og:image:alt" content="Тайшет - Неофициальный сайт города" />
+		
+		  <!-- Дополнительные мета-теги -->
+		  <meta property="og:site_name" content="Тайшет - Неофициальный сайт города" />
+		  <meta property="og:locale" content="ru_RU" />
+		
+		  <!-- Twitter карточки -->
+		  <meta name="twitter:title" content="Тайшет - Неофициальный сайт города" />
+		  <meta name="twitter:description" content="Неофициальный сайт города Тайшет. Узнайте больше о жизни и событиях города!" />
+		
+		<link rel="shortcut icon" href="https://www.heraldicum.ru/russia/subjects/towns/images/taishet3.gif" type="image/x-icon" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -20,31 +37,3 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
