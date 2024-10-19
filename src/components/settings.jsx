@@ -11,7 +11,7 @@ export default function Settings() {
             <button className="btn lg:btn-ghost max-lg:btn-outline max-lg:w-full" onClick={() => setActive(!active)}>
                 Настройки <MdOutlineSettings className="w-6 h-6"/>
             </button>
-            <div className={`fixed w-full h-full bg-base-200 lg:bg-black/60 top-0 left-0 duration-500 ease-in-out p-6 ${active ? '' : 'max-lg:-translate-x-full pointer-events-none opacity-0'}`}>
+            <div className={`fixed w-full h-full bg-base-200 lg:bg-black/60 top-0 left-0 duration-500 ease-in-out p-6 ${active ? '' : 'max-lg:-translate-x-full pointer-events-none lg:opacity-0'}`} onClick={(e) => e.stopPropagation()}>
                 <div className="flex justify-between items-center lg:hidden">
                     <MdOutlineArrowBackIosNew className="w-8 h-8 mt-1" onClick={() => setActive(!active)}/>
                     <p className="text-4xl font-bold">Настройки</p>
