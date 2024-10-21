@@ -1,5 +1,6 @@
 import { FaBars } from "react-icons/fa";
 import { MdOutlineArrowBackIosNew, MdEmojiEvents, MdLink, MdHome } from "react-icons/md";
+import { BiNews } from "react-icons/bi";
 
 import { useState } from "react";
 import { useSwipeable } from 'react-swipeable';
@@ -31,6 +32,9 @@ export default function NavBar() {
                     </button>
                     <button className="btn btn-outline w-full">
                         События <MdEmojiEvents className="w-6 h-6"/>
+                    </button>
+                    <button className="btn btn-outline w-full">
+                        Новости <BiNews className="w-6 h-6"/>
                     </button>
                     <button className="btn btn-outline w-full">
                         Оффициальные ссылки <MdLink className="w-6 h-6"/>
