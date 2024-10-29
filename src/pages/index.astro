@@ -2,6 +2,7 @@
 import Main from '../layouts/main.astro';
 
 import Alert from '../components/alert.tsx';
+import News from '../components/main/news';
 
 import { MdWork, MdMap, MdForum, MdFastfood } from "react-icons/md";
 
@@ -10,7 +11,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 <Main title="It's Тайшет - Главная страница">
 	<div class="container mx-auto flex max-lg:flex-col-reverse justify-between gap-4 mt-4 ">
-		<div class="w-full lg:w-1/3 p-4 bg-base-200 border-2 border-base-300 shadow-lg rounded-btn">
+		<div class="w-full max-h-max lg:w-1/3 p-4 bg-base-200 border-2 border-base-300 shadow-lg rounded-btn">
 			<p>
 				<span class="font-bold">Тайшет</span> — это небольшой город в Иркутской области России, расположенный в западной части региона на пересечении Транссибирской магистрали и Байкало-Амурской магистрали (БАМ). Город обладает интересной историей, так как он был основан в <span class="font-bold">1897</span> году как железнодорожная станция и постепенно вырос в небольшой, но значимый транспортный узел. Благодаря своему местоположению, Тайшет стал важным пунктом для грузовых перевозок и поездов, следовавших по Транссибу.
 			</p>
@@ -19,7 +20,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 		<div class="w-full lg:w-full p-4 bg-base-200 border-2 border-base-300 shadow-lg rounded-btn max-h-max">
 			<Alert client:load/>
 			<h3 class="text-2xl font-bold text-center mb-2">Новое для вас</h3>
-
+			<News client:load/>
 		</div>
 		<div class="w-full lg:w-1/3 p-4 bg-base-200 border-2 border-base-300 shadow-lg rounded-btn max-h-max">
 			<h3 class="text-2xl font-bold text-center mb-2">Полезные ссылки</h3>

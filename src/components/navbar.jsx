@@ -19,9 +19,9 @@ export default function NavBar() {
     return (
         <>
             <button className="btn"> 
-				<FaBars className={`w-7 h-7 duration-500 ease-in-out z-40 ${active ? 'rotate-90' : ''}`} onClick={() => setActive(!active)}/>
+				<FaBars className={`w-7 h-7 duration-500 ease-in-out ${active ? 'rotate-90' : ''}`} onClick={() => setActive(!active)}/>
 			</button>
-            <div {...handlers} className={`fixed h-full w-full bg-base-200 top-0 left-0 duration-500 ease-in-out p-6 ${active ? '' : '-translate-x-full'}`}>
+            <div {...handlers} className={`fixed h-full w-full bg-base-200 top-0 left-0 duration-500 z-40 ease-in-out p-6 ${active ? '' : '-translate-x-full'}`}>
                 <div className="flex justify-between items-center">
                     <MdOutlineArrowBackIosNew className="w-8 h-8 mt-1" onClick={() => setActive(!active)}/>
                     <p className="text-4xl font-bold">It's Тайшет</p>

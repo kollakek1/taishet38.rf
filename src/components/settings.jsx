@@ -8,7 +8,7 @@ export default function Settings() {
     return (
         <>
 
-            <button className="btn lg:btn-ghost max-lg:btn-outline max-lg:w-full z-50" onClick={() => setActive(!active)}>
+            <button className="btn lg:btn-ghost max-lg:btn-outline max-lg:w-full" onClick={() => setActive(!active)}>
                 Настройки <MdOutlineSettings className="w-6 h-6"/>
             </button>
             <div className={`fixed w-full h-full bg-base-200 lg:bg-black/60 top-0 left-0 duration-500 ease-in-out p-6 ${active ? '' : 'max-lg:-translate-x-full pointer-events-none lg:opacity-0'}`} onClick={(e) => e.stopPropagation()}>

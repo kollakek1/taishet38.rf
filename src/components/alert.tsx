@@ -7,6 +7,7 @@ export default function Alert() {
     useEffect(() => {
         const data = localStorage.getItem('AlertMain');
         if (data === null) {
+            setActive(true);
             localStorage.setItem('AlertMain', 'true');
         } else {
             setActive(data === 'true');
@@ -17,7 +18,7 @@ export default function Alert() {
         <div className={`alert bg-base-100 shadow-lg mb-2 ${active ? '' : 'hidden'}`}>
             <MdInfo className="w-7 h-7 text-info"/>
             <div>
-                <h3><span className="font-bold">Этот сайт</span> — неофициальный портал города Тайшет, который создан для того, чтобы делиться событиями и важной информацией о жизни города.</h3>
+                <h3><span className="font-bold">Этот сайт</span> — неофициальный портал города <a href="https://ru.wikipedia.org/wiki/Тайшет" className='link'>Тайшет</a>, который создан для того, чтобы делиться событиями и важной информацией о жизни города.</h3>
             </div>
             <button className="btn btn-sm lg:btn-ghost btn-square" onClick={() => {
                 localStorage.setItem('AlertMain', 'false')
